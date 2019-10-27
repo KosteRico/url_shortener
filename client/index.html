@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+<div class="container h-100 my-auto">
+    <div class="row h-100 justify-content-center align-items-center" id="div-form">
+        <form method="post" class="col-12 needs-validation" id="my-form" action="" novalidate>
+            <div class="form-group row">
+                <label class="col-3 " for="fullURL">Full URL</label>
+                <div class="col-9">
+                    <input type="url" name="real_url" class="form-control" id="fullURL"
+                           placeholder="https://google.com/" required>
+                    <div class="invalid-feedback">Invalid URL</div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-3" for="shortName">Short name</label>
+                <input type="text" name="name" class="col-9 form-control" id="shortName">
+            </div>
+            <button type="button" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="validation.js"></script>
+    <script src="ajax.js"></script>
+</div>
+</body>
+</html>

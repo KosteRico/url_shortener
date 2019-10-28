@@ -1,9 +1,10 @@
 from django.urls import path
 from rest_framework import routers
 
-from .views import add_real_url, get_real_url
+from .views import *
 
 urlpatterns = [
-    path('addlink/', add_real_url, name='addlink'),
-    path('<str:name>/', get_real_url, name='getrealurl')
+    path('<str:short_url>/', redirect_link, name='redirectlink'),
+    path('api/v0/addlink/', add_real_url, name='addlink'),
+    path('api/v0/<str:name>/', get_real_url, name='getrealurl')
 ]

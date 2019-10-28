@@ -1,0 +1,13 @@
+from django.shortcuts import redirect
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+
+@api_view(['GET'])
+def redirect_link(request, short_url):
+    real_url = LinkModel.objects.get(name=short_url)
+    if real_url is not "":
+        return redirect(real_url)
+    else:
+        return Response(status=status.HTTP_404_NOT_FOUND)

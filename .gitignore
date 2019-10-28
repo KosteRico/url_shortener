@@ -1,1 +1,3 @@
 /.idea/
+/URL_shortener/db.sqlite3
+*initial.py
